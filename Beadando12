@@ -1,0 +1,24 @@
+#Feladat12
+  def prim(k):
+                    #függvény megvizsgálja prím szám.e
+
+    if k==2:
+            return 'Prim'
+    for i in range(2,k):
+        if k%i == 0:
+            return 'Nem prím'
+    return 'Prím'
+
+
+
+def Feladat12():
+    m = []      #lista melyben eltároljuk a prím számokat
+    a = 0       #prím számokat számolja
+    b = 1       #számláló
+    while True:
+        if a==10001:
+            return m[a-1]   #lista utolsó előtti eleme
+        elif prim(b) == 'Prím': #ha prím a szám hozzáadja a listához
+            m.append(b)
+            a += 1
+        b += 1
